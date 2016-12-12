@@ -4,7 +4,7 @@
   <description>Esta plataforma servirá para o desenvolvimento de aplcações móveis na unidade curricular de Introdução às tecnologias Web (ITW) no ano letivo de 2015/16.</description>
   <author email="jsp@ua.pt" href="www.ua.pt/deti">Departamento de Engª Elestrónica e Telecomunicações, Universidade de Aveiro</author>
   <preference name="permissions" value="none" />
-  <preference name="orientation" value="both" />
+  <preference name="orientation" value="default" />
   <preference name="target-device" value="universal" />
   <preference name="fullscreen" value="true" />
   <preference name="webviewbounce" value="true" />
