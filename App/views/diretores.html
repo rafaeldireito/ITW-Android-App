@@ -1,0 +1,55 @@
+<style>
+    .background {
+        background: url(background.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+</style>
+<section>
+	<div class="page-header">
+		<h2 style="padding:10px; padding-top:30px">DirectorService - <small data-bind="visible: (directorsCount() > 0)"><i class="fa fa-film"></i> Directors List [<span data-bind="text: directorsCount"></span> ]</small></h2>
+	</div>
+	<div class="container">
+		<!--este div desaparece quando clicas num diretor-->
+		<div id="searchPlace">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-2">
+					<div class="input-group">
+						<span class="input-group-addon" id="basic-addon1">Director Name:</span>
+						<input type="text" id="directorTitle" class="form-control" data-bind="value : searchText" aria-describedby="basic-addon1" placeholder="Director name" />
+					</div>
+				</div>
+				<div class="col-md-2">
+					<button class="btn btn-default" id="searchBtn" data-bind="click: searchDirectors, disable : searchTextGood"><i class="fa fa-search"></i></button>
+					<button class="btn btn-default" id="clearSearchBtn" data-bind="click : clearDirectors"><i class="fa fa-trash-o"></i></button>
+				</div>
+			</div>
+			<hr />
+			<div class="row" data-bind="foreach: directors">
+				<div class="col-md-4">
+					<div><i class="fa fa-film"></i> <a data-bind="attr: {id: directorID}, text: directorName, click: getDiretor"></a></div>
+				</div>
+			</div>
+		</div>
+		
+		<!--Este div aparece assim que clicares num nome dum gajo
+		O design da parte onde aparece um gajo é aqui-->
+
+		<div id="diretor" class="">
+
+			<!--<div data-bind="foreach: diretorInfo">
+				<span data-bind="text: directorName"></span>
+                <span data-bind="text: directorID"></span>
+                <span data-bind="text: directorFacebookLikes"></span>
+                <span data-bind="text: movies"></span>
+                <span data-bind="html: movies"></span>
+               
+                <img width="16px" height="16px" data-bind="attr:{src: photo}" /> 
+                <img width="50px" height="50px" data-bind="attr:{src: photo}" />
+			</div>
+		</div>
+		<span class="alert alert-danger col-md-12" data-bind="visible: error, html: error"></span>-->
+	</div>
+</section>
